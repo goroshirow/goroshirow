@@ -12,27 +12,17 @@
 
 ## はじめまして
 
-学生として学びながら、CTFに挑戦しています。解けた問題だけでなく、つまずいた点や新しく知ったこともWriteUpにまとめています。少しずつ学びを積み重ねています 🌱
+戦闘力のあるセキュリティエンジニアを目指して、日々技術のお勉強に励んでいます。
 
 ## CTF WriteUps
 
 <div align="center">
 
-<a href="https://github.com/goroshirow/CTF-WriteUps"><img src="https://github-readme-stats.vercel.app/api/pin/?username=goroshirow&repo=CTF-WriteUps&hide_border=true&bg_color=F8FAFF&title_color=6574CD&text_color=596579&icon_color=E8A6C3" width="420" alt="CTF WriteUps repository card" /></a>
-<a href="https://github.com/goroshirow/HTB_WriteUps"><img src="https://github-readme-stats.vercel.app/api/pin/?username=goroshirow&repo=HTB_WriteUps&hide_border=true&bg_color=F8FAFF&title_color=6574CD&text_color=596579&icon_color=E8A6C3" width="420" alt="Hack The Box WriteUps repository card" /></a>
+<a href="https://github.com/goroshirow/CTF-WriteUps"><img src="https://github-readme-stats.vercel.app/api/pin/?username=goroshirow&repo=CTF-WriteUps&hide_border=true&bg_color=F8FAFF&title_color=6574CD&text_color=596579&icon_color=E8A6C3" width="420" alt="CTF WriteUps repository Link" /></a>
 
 </div>
 
-| アーカイブ | 内容 |
-| --- | --- |
-| [CTF WriteUps](https://github.com/goroshirow/CTF-WriteUps) | これまでに解いたCTF問題の記録 |
-| [Hack The Box WriteUps](https://github.com/goroshirow/HTB_WriteUps) | Hack The Boxの挑戦記録 |
-
-## 学びの記録
-
-- 解法を自分の言葉で整理する
-- つまずいたところも、次の挑戦に活かせるよう残す
-- 新しい知識を一つずつ積み重ねる
+## ネコも頑張ってます
 
 <div align="center">
 

@@ -14,7 +14,7 @@
 
 戦闘力のあるセキュリティエンジニアを目指して、日々技術のお勉強に励んでいます。
 
-<a href="https://github.com/goroshirow/CTF-WriteUps"><img src="https://github-readme-stats.vercel.app/api/pin/?username=goroshirow&repo=CTF-WriteUps&hide_border=true&bg_color=F8FAFF&title_color=6574CD&text_color=596579&icon_color=E8A6C3" width="420" alt="CTF WriteUps repository Link" /></a>
+<a href="https://github.com/goroshirow/CTF-WriteUps"><img src="https://github-readme-stats.vercel.app/api/pin/?username=goroshirow&repo=CTF-WriteUps&hide_border=false&border_color=6574CD&bg_color=F8FAFF&title_color=6574CD&text_color=596579&icon_color=E8A6C3" width="420" alt="CTF-WriteUps repository card" /></a>
 
 ## ネコも頑張ってます
 

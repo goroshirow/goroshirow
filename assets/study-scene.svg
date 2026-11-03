@@ -404,13 +404,140 @@
     </g>
   </g>
 
-  <!-- Animated cat: walks to laptop, types, returns -->
-  <g>
-    <animateTransform attributeName="transform"
-      type="translate"
-      values="0 0;0 0;-255 0;-255 0;0 0;0 0"
-      keyTimes="0;.1;.32;.6;.78;1"
-      dur="16s" repeatCount="indefinite"/>
+<!-- Cat: walks left, interrupts typing, returns right -->
+<g>
+  <!-- Horizontal movement -->
+  <animateTransform
+    attributeName="transform"
+    type="translate"
+    values="0 0;0 0;-255 0;-255 0;0 0;0 0"
+    keyTimes="0;.1;.32;.6;.78;1"
+    dur="16s"
+    repeatCount="indefinite"/>
+
+  <!-- Flip around the cat's center (x=795) -->
+  <g transform="translate(795 0)">
+    <g>
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        calcMode="discrete"
+        values="-1 1;1 1;-1 1"
+        keyTimes="0;.6;.999"
+        dur="16s"
+        repeatCount="indefinite"/>
+
+      <g transform="translate(-795 0)">
+
+        <!-- Tail -->
+        <g>
+          <path
+            d="M764 220Q740 210 744 193Q749 183 758 194"
+            fill="none"
+            stroke="#777084"
+            stroke-width="9"
+            stroke-linecap="round"/>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="-15 764 220;20 764 220;-15 764 220"
+            dur="1.8s"
+            repeatCount="indefinite"/>
+        </g>
+
+        <!-- Body -->
+        <ellipse cx="789" cy="218" rx="34" ry="20"
+                 fill="#f8f6f5"/>
+        <path d="M773 207Q790 201 805 211"
+              fill="none"
+              stroke="#ece7ed"
+              stroke-width="5"
+              stroke-linecap="round"/>
+
+        <!-- Walking paws -->
+        <g>
+          <path d="M777 228v12"
+                stroke="#f8f6f5"
+                stroke-width="9"
+                stroke-linecap="round"/>
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 0;0 -6;0 0"
+            dur=".55s"
+            repeatCount="indefinite"/>
+        </g>
+        <g>
+          <path d="M803 228v12"
+                stroke="#f8f6f5"
+                stroke-width="9"
+                stroke-linecap="round"/>
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 -6;0 0;0 -6"
+            dur=".55s"
+            repeatCount="indefinite"/>
+        </g>
+
+        <!-- Head -->
+        <circle cx="818" cy="194" r="19"
+                fill="#f8f6f5"/>
+        <path d="M802 184l2-19 14 12
+                 M824 176l14-13-1 22"
+              fill="#f8f6f5"
+              stroke="#e6dfe8"
+              stroke-width="3"
+              stroke-linejoin="round"/>
+        <path d="M807 180l2-8 6 6
+                 M829 177l6-6-1 9"
+              fill="#ebb9c8"/>
+
+        <!-- Eyes -->
+        <g stroke="#746b7b"
+           stroke-width="2.5"
+           stroke-linecap="round">
+          <path d="M811 194h3M824 194h3"/>
+          <animate
+            attributeName="opacity"
+            values="1;1;0;1"
+            keyTimes="0;.76;.8;1"
+            dur="4.8s"
+            repeatCount="indefinite"/>
+        </g>
+
+        <!-- Face -->
+        <path d="M818 200l2 2 2-2"
+              fill="#e6a3b7"/>
+        <path d="M820 202q-4 5-7 1
+                 M820 202q4 5 7 1"
+              fill="none"
+              stroke="#bd95a3"
+              stroke-width="1.5"/>
+
+        <!-- Keyboard-tapping paw -->
+        <g>
+          <path d="M811 213Q803 226 796 236"
+                fill="none"
+                stroke="#f8f6f5"
+                stroke-width="9"
+                stroke-linecap="round"/>
+          <ellipse cx="794" cy="238"
+                   rx="7" ry="4"
+                   fill="#f8f6f5"/>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="-4 811 213;7 811 213;-4 811 213"
+            dur=".45s"
+            repeatCount="indefinite"/>
+        </g>
+
+      </g>
+    </g>
+  </g>
+</g>
+
 
     <!-- Tail -->
     <g>

@@ -4,7 +4,7 @@
 
 <img src="./assets/study-scene.svg" width="100%" alt="An animated pastel illustration of studying at a desk with a curious cat, drifting clouds, twinkling stars, and rising coffee steam" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&size=20&duration=2600&pause=900&color=6574CD&center=true&vCenter=true&width=720&height=48&lines=%E5%AD%A6%E3%81%B3%E3%81%AA%E3%81%8C%E3%82%89%E3%80%81%E4%B8%80%E6%AD%A9%E3%81%9A%E3%81%A4%E3%80%82;CTF%E3%81%AE%E6%8C%91%E6%88%A6%E3%82%92+WriteUp+%E3%81%AB%E3%80%82;Curious+today%2C+better+tomorrow+%E2%9C%A8" alt="Animated introduction" />
+<img src="https://readme-typing-svg.demolab.com?font=Nunito&weight=700&size=20&duration=2600&pause=900&color=6574CD&center=true&vCenter=true&width=720&height=48&lines=Binary+Exploitation;Cryptography+%2F+Side-Channel+Analysis;Traveling+%F0%9F%8C%8D;Curious+today%2C+better+tomorrow+%E2%9C%A8" alt="Animated introduction" />
 
 </div>
 
@@ -14,13 +14,7 @@
 
 戦闘力のあるセキュリティエンジニアを目指して、日々技術のお勉強に励んでいます。
 
-## CTF WriteUps
-
-<div align="center">
-
 <a href="https://github.com/goroshirow/CTF-WriteUps"><img src="https://github-readme-stats.vercel.app/api/pin/?username=goroshirow&repo=CTF-WriteUps&hide_border=true&bg_color=F8FAFF&title_color=6574CD&text_color=596579&icon_color=E8A6C3" width="420" alt="CTF WriteUps repository Link" /></a>
-
-</div>
 
 ## ネコも頑張ってます
 

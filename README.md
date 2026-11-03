@@ -15,7 +15,7 @@
 戦闘力のあるセキュリティエンジニアを目指して、日々技術のお勉強に励んでいます。
 
 <p align="center">
-  <a href="https://github.com/goroshirow/CTF-WriteUps"><img src="./assets/ctf-writeups-card-large.svg" width="49%" alt="CTF-WriteUps" /></a>&nbsp;<a href="https://zenn.dev/goroshirow"><img src="./assets/zenn-card-large.svg" width="49%" alt="goroshirowのzenn" /></a>
+  <a href="https://github.com/goroshirow/CTF-WriteUps"><img src="./assets/ctf-writeups-card-compact.svg" width="48%" alt="CTF-WriteUps" /></a>&nbsp;&nbsp;<a href="https://zenn.dev/goroshirow"><img src="./assets/zenn-card-compact.svg" width="48%" alt="goroshirowのzenn" /></a>
 </p>
 
 ## ネコも頑張ってます

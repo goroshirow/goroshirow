@@ -20,7 +20,7 @@
 
 <div align="center">
 
-<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="210" alt="A cat typing at a computer" />
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="310" alt="A cat typing at a computer" />
 
 <br/>
 <sub>勉強のおとも（監督中） 🐾</sub>

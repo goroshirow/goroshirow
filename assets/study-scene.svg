@@ -1,695 +1,298 @@
-
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 960 300"
-     width="960" height="300"
-     role="img"
-     aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img" aria-labelledby="title desc">
   <title id="title">A little study break</title>
-  <desc id="desc">An animated pastel study room with a day-night cycle, automatic lamp, typing student, and a mischievous cat.</desc>
+  <desc id="desc">A pastel study room with day and night, a lamp that lights up after dusk, a student learning, and a cat that walks to the laptop and types meow.</desc>
 
   <defs>
     <linearGradient id="wall" x2="1" y2="1">
-      <stop stop-color="#f1f6ff"/>
-      <stop offset=".55" stop-color="#faf3ff"/>
-      <stop offset="1" stop-color="#fff0f5"/>
+      <stop stop-color="#f4f8ff"/>
+      <stop offset=".55" stop-color="#f8f2ff"/>
+      <stop offset="1" stop-color="#fff0f6"/>
     </linearGradient>
-    <linearGradient id="sky" x2="0" y2="1">
-      <stop stop-color="#aee1f5"/>
-      <stop offset="1" stop-color="#f7def1"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#a8def4"/>
+      <stop offset="1" stop-color="#f1e0f6"/>
     </linearGradient>
-    <linearGradient id="nightSky" x2="0" y2="1">
-      <stop stop-color="#303565"/>
-      <stop offset="1" stop-color="#8179ad"/>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#303762"/>
+      <stop offset="1" stop-color="#7773a8"/>
     </linearGradient>
-    <linearGradient id="wood" x2="1" y2="0">
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
       <stop stop-color="#d6b69d"/>
-      <stop offset=".5" stop-color="#f1dac4"/>
-      <stop offset="1" stop-color="#d6b39c"/>
+      <stop offset=".5" stop-color="#f2dbc5"/>
+      <stop offset="1" stop-color="#d6b39b"/>
     </linearGradient>
-    <linearGradient id="monitor" x2="1" y2="1">
-      <stop stop-color="#293753"/>
-      <stop offset="1" stop-color="#171e35"/>
+    <linearGradient id="monitor" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#273650"/>
+      <stop offset="1" stop-color="#171e36"/>
     </linearGradient>
     <radialGradient id="lampGlow">
-      <stop stop-color="#ffe8a7" stop-opacity=".66"/>
-      <stop offset=".45" stop-color="#ffe7b4" stop-opacity=".29"/>
-      <stop offset="1" stop-color="#ffe7b4" stop-opacity="0"/>
+      <stop stop-color="#ffe5a0" stop-opacity=".76"/>
+      <stop offset=".5" stop-color="#ffe5ae" stop-opacity=".29"/>
+      <stop offset="1" stop-color="#ffe5ae" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="sunGlow">
-      <stop stop-color="#fff4c9" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#fff4c9" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="softShadow" x="-30%" y="-50%"
-            width="160%" height="200%">
-      <feGaussianBlur stdDeviation="5"/>
-    </filter>
+    <pattern id="wallDots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r=".75" fill="#b4accb" opacity=".22"/>
+    </pattern>
     <clipPath id="windowClip">
-      <rect x="66" y="45" width="246" height="139" rx="6"/>
+      <rect x="66" y="44" width="247" height="142" rx="7"/>
     </clipPath>
-    <clipPath id="typingClip">
-      <rect x="452" y="191" width="0" height="15">
-        <animate attributeName="width"
-          values="0;0;144;144;0"
-          keyTimes="0;.1;.75;.9;1"
-          dur="6s" repeatCount="indefinite"/>
+    <clipPath id="typeClip">
+      <rect x="451" y="183" height="28" width="0">
+        <animate attributeName="width" values="0;0;136;136;0" keyTimes="0;.12;.77;.94;1" dur="6s" repeatCount="indefinite"/>
       </rect>
     </clipPath>
+    <filter id="softShadow" x="-35%" y="-50%" width="170%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
   </defs>
 
-  <!-- Room -->
-  <rect width="960" height="300" rx="24"
-        fill="url(#wall)"/>
-  <ellipse cx="810" cy="65" rx="210" ry="140"
-           fill="url(#sunGlow)"/>
+  <!-- Wallpaper -->
+  <rect width="960" height="300" rx="24" fill="url(#wall)"/>
+  <rect width="960" height="300" rx="24" fill="url(#wallDots)"/>
+  <path d="M0 273Q470 252 960 273V300H0Z" fill="#f1e8f3" opacity=".6"/>
 
-  <!-- Window frame -->
-  <rect x="54" y="33" width="270" height="166"
-        rx="14" fill="#fff"
-        stroke="#dce3f0" stroke-width="6"/>
-
+  <!-- Window and animated weather -->
+  <rect x="55" y="33" width="269" height="169" rx="13" fill="#fff" stroke="#d9e1ef" stroke-width="6"/>
   <g clip-path="url(#windowClip)">
-    <rect x="66" y="45" width="246" height="139"
-          fill="url(#sky)"/>
+    <rect x="66" y="44" width="247" height="142" fill="url(#sky)"/>
+    <circle cx="265" cy="80" r="27" fill="#fff2bb" opacity=".46"/>
+    <circle cx="265" cy="80" r="16" fill="#fff7d3"/>
+    <path d="M66 168Q122 137 183 165T313 157V190H66Z" fill="#b5d6cd"/>
+    <path d="M66 179Q133 155 190 175T313 164V190H66Z" fill="#9dc5bf"/>
 
-    <!-- Sun -->
-    <circle cx="266" cy="78" r="29"
-            fill="#fff0b4" opacity=".4"/>
-    <circle cx="266" cy="78" r="17"
-            fill="#fff5c9"/>
-
-    <!-- Day landscape -->
-    <path d="M66 166Q125 133 184 167
-             T312 158V190H66Z"
-          fill="#b8d6cd"/>
-    <path d="M66 178Q119 155 183 177
-             T312 168V190H66Z"
-          fill="#91bcb8"/>
-
-    <!-- Night -->
-    <g opacity="0">
-      <rect x="66" y="45" width="246" height="139"
-            fill="url(#nightSky)"/>
-      <path d="M66 166Q125 133 184 167
-               T312 158V190H66Z"
-            fill="#555c87"/>
-
-      <!-- Moon -->
-      <circle cx="265" cy="78" r="15"
-              fill="#fff4d5"/>
-      <circle cx="272" cy="72" r="13"
-              fill="#3e437b"/>
-
-      <!-- Stars -->
-      <g fill="#fff7d6">
-        <circle cx="97" cy="64" r="2">
-          <animate attributeName="opacity"
-            values=".2;1;.2" dur="2s"
-            repeatCount="indefinite"/>
-        </circle>
-        <circle cx="146" cy="90" r="1.8">
-          <animate attributeName="opacity"
-            values="1;.2;1" dur="2.8s"
-            repeatCount="indefinite"/>
-        </circle>
-        <circle cx="213" cy="62" r="2">
-          <animate attributeName="opacity"
-            values=".3;1;.3" dur="1.9s"
-            repeatCount="indefinite"/>
-        </circle>
-        <path d="M117 107l2 5 5 2-5 2-2 5-2-5-5-2 5-2z">
-          <animate attributeName="opacity"
-            values=".2;1;.2" dur="3s"
-            repeatCount="indefinite"/>
-        </path>
-      </g>
-
-      <animate attributeName="opacity"
-        values="0;0;1;1;0;0"
-        keyTimes="0;.3;.43;.75;.9;1"
-        dur="24s" repeatCount="indefinite"/>
-    </g>
-
-    <!-- Drifting clouds -->
-    <g fill="#fff" opacity=".76">
+    <g fill="#fff" opacity=".72">
       <g>
-        <ellipse cx="122" cy="94" rx="30" ry="10"/>
-        <circle cx="105" cy="87" r="13"/>
-        <circle cx="125" cy="81" r="17"/>
-        <circle cx="146" cy="91" r="11"/>
-        <animateTransform attributeName="transform"
-          type="translate"
-          values="-35 0;55 0;-35 0"
-          dur="26s" repeatCount="indefinite"/>
+        <ellipse cx="117" cy="90" rx="34" ry="10"/>
+        <circle cx="100" cy="83" r="14"/>
+        <circle cx="122" cy="77" r="18"/>
+        <circle cx="141" cy="85" r="12"/>
+        <animateTransform attributeName="transform" type="translate" values="-30 0;55 0;-30 0" dur="28s" repeatCount="indefinite"/>
+      </g>
+      <g opacity=".7">
+        <ellipse cx="237" cy="124" rx="26" ry="9"/>
+        <circle cx="223" cy="119" r="12"/>
+        <circle cx="245" cy="115" r="15"/>
+        <animateTransform attributeName="transform" type="translate" values="28 0;-45 0;28 0" dur="31s" repeatCount="indefinite"/>
       </g>
     </g>
+
+    <!-- Same 24-second opacity curve is used for room darkness and lamp -->
+    <g opacity="0">
+      <rect x="66" y="44" width="247" height="142" fill="url(#nightSky)"/>
+      <path d="M66 168Q122 137 183 165T313 157V190H66Z" fill="#555e87"/>
+      <path d="M66 179Q133 155 190 175T313 164V190H66Z" fill="#404c77"/>
+      <circle cx="266" cy="80" r="14" fill="#fff5d8"/>
+      <circle cx="273" cy="74" r="13" fill="#424775"/>
+      <g fill="#fff8d6">
+        <circle cx="103" cy="65" r="2"><animate attributeName="opacity" values=".25;1;.25" dur="2.2s" repeatCount="indefinite"/></circle>
+        <circle cx="153" cy="87" r="1.5"><animate attributeName="opacity" values="1;.2;1" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="212" cy="62" r="1.9"><animate attributeName="opacity" values=".2;1;.2" dur="1.9s" repeatCount="indefinite"/></circle>
+        <path d="M120 108l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"><animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/></path>
+      </g>
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.30;.43;.75;.90;1" dur="24s" repeatCount="indefinite"/>
+    </g>
   </g>
+  <path d="M190 44V186M66 114H313" fill="none" stroke="#fff" stroke-width="6" opacity=".88"/>
+  <path d="M56 38Q77 57 65 99L86 44H56Z M323 38Q301 58 316 99L295 44H323Z" fill="#f0d1e5" opacity=".8"/>
+  <rect x="48" y="196" width="283" height="9" rx="4" fill="#e4e7f2"/>
 
-  <path d="M189 45V184M66 113H312"
-        stroke="#fff" stroke-width="6"
-        opacity=".85"/>
-  <rect x="48" y="194" width="282" height="10"
-        rx="4" fill="#e5e7f2"/>
+  <!-- Pinboard -->
+  <rect x="755" y="44" width="138" height="115" rx="11" fill="#f1d7c7" stroke="#e2beb3" stroke-width="5"/>
+  <rect x="765" y="54" width="118" height="95" rx="5" fill="#eac9b8"/>
+  <g transform="rotate(-5 792 92)">
+    <rect x="769" y="70" width="52" height="46" rx="3" fill="#fff0b7"/>
+    <text x="795" y="97" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#947b8c">PWN</text>
+  </g>
+  <g transform="rotate(6 847 105)">
+    <rect x="824" y="85" width="50" height="44" rx="3" fill="#d7e9f7"/>
+    <text x="849" y="111" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#7889aa">SCA</text>
+  </g>
+  <circle cx="791" cy="72" r="3" fill="#eaa1b5"/>
+  <circle cx="848" cy="87" r="3" fill="#9ea8d7"/>
+  <path d="M779 138l3-5 3 5 5 1-4 4 1 5-5-3-5 3 1-5-4-4z" fill="#fff0b8"/>
 
-  <!-- Wall decorations -->
+  <!-- Desk lamp, initially off -->
+  <path d="M668 0V51" stroke="#c6b4c7" stroke-width="3"/>
+  <path d="M638 78Q644 51 668 51Q696 51 702 78Z" fill="#eabfce"/>
+  <path d="M638 78Q670 88 702 78" fill="none" stroke="#d7a6b8" stroke-width="3"/>
+  <ellipse cx="670" cy="80" rx="14" ry="4" fill="#b9a2a5"/>
+
+  <!-- Student chair and silhouette -->
+  <rect x="347" y="150" width="118" height="90" rx="32" fill="#c5c4e6"/>
+  <path d="M374 157Q356 128 371 92Q384 68 411 68Q442 68 451 103Q457 134 443 158Z" fill="#61556e"/>
+  <path d="M376 173Q405 150 448 172Q465 188 472 236H347Q354 192 376 173Z" fill="#9eafe5"/>
+  <path d="M389 164l21 19 20-19" fill="#fff9ff"/>
+  <path d="M410 183l-7 52h15Z" fill="#8ba2d8" opacity=".6"/>
   <g>
-    <rect x="754" y="43" width="139" height="113"
-          rx="10" fill="#f0d5c5"
-          stroke="#e4c0b2" stroke-width="5"/>
-    <rect x="764" y="53" width="119" height="93"
-          rx="5" fill="#eac6b5"/>
-
-    <g transform="rotate(-5 793 88)">
-      <rect x="770" y="67" width="51" height="46"
-            rx="3" fill="#fff0b5"/>
-      <text x="795" y="92" text-anchor="middle"
-            font-family="monospace"
-            font-size="12" font-weight="bold"
-            fill="#957888">PWN</text>
+    <ellipse cx="410" cy="119" rx="29" ry="35" fill="#ffdacd"/>
+    <path d="M381 113Q386 80 410 81Q438 81 441 112Q425 108 416 96Q404 111 381 113Z" fill="#61556e"/>
+    <g stroke="#6b5d72" stroke-width="3" stroke-linecap="round">
+      <path d="M397 123h3M422 123h3"/>
+      <animate attributeName="opacity" values="1;1;0;1" keyTimes="0;.91;.94;1" dur="4.8s" repeatCount="indefinite"/>
     </g>
-    <g transform="rotate(6 851 101)">
-      <rect x="827" y="81" width="49" height="45"
-            rx="3" fill="#d7e9f9"/>
-      <text x="851" y="106" text-anchor="middle"
-            font-family="monospace"
-            font-size="12" font-weight="bold"
-            fill="#7289aa">SCA</text>
-    </g>
-    <circle cx="792" cy="69" r="3" fill="#e7a1b6"/>
-    <circle cx="852" cy="82" r="3" fill="#a5a9da"/>
+    <ellipse cx="389" cy="133" rx="5" ry="3" fill="#f2a9b9" opacity=".55"/>
+    <ellipse cx="433" cy="133" rx="5" ry="3" fill="#f2a9b9" opacity=".55"/>
+    <path d="M406 138q4 4 8 0" fill="none" stroke="#d58b99" stroke-width="2"/>
+    <animateTransform attributeName="transform" type="rotate" values="-1 410 119;2 410 119;-1 410 119" dur="5.4s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Student -->
-  <rect x="350" y="151" width="113" height="88"
-        rx="32" fill="#c2c1e2"/>
+  <!-- Desk and objects -->
+  <ellipse cx="480" cy="246" rx="404" ry="17" fill="#806c83" opacity=".13" filter="url(#softShadow)"/>
+  <rect x="108" y="239" width="17" height="49" rx="2" fill="#c39e89"/>
+  <rect x="820" y="239" width="17" height="49" rx="2" fill="#c39e89"/>
+  <path d="M80 214H879L850 239H106Z" fill="url(#wood)"/>
+  <path d="M106 239H850V245H106Z" fill="#c9a590"/>
+  <path d="M92 218H867" stroke="#fff5ec" stroke-width="2" opacity=".7"/>
 
-  <!-- Hair -->
-  <path d="M372 155Q356 120 373 89
-           Q384 69 411 68
-           Q439 69 450 99
-           Q460 126 444 155Z"
-        fill="#61556f"/>
-
-  <!-- Body -->
-  <path d="M374 170Q410 151 447 170
-           Q466 187 472 234H350
-           Q354 190 374 170Z"
-        fill="#9eafe6"/>
-  <path d="M390 164l20 19 19-19"
-        fill="#fff9ff"/>
-  <path d="M410 183l-6 48h13z"
-        fill="#899dd7"/>
-
-  <!-- Face -->
-  <g>
-    <ellipse cx="410" cy="120" rx="29" ry="35"
-             fill="#ffdbce"/>
-    <path d="M382 112Q383 82 411 81
-             Q438 82 442 111
-             Q422 108 416 96
-             Q403 111 382 112Z"
-          fill="#61556f"/>
-    <g stroke="#66576e" stroke-width="3"
-       stroke-linecap="round">
-      <path d="M397 123h3M421 123h3"/>
-      <animate attributeName="opacity"
-        values="1;1;0;1"
-        keyTimes="0;.91;.94;1"
-        dur="4.7s" repeatCount="indefinite"/>
-    </g>
-    <ellipse cx="389" cy="133" rx="5" ry="3"
-             fill="#f1a8b9" opacity=".55"/>
-    <ellipse cx="432" cy="133" rx="5" ry="3"
-             fill="#f1a8b9" opacity=".55"/>
-    <path d="M406 138q4 4 8 0"
-          fill="none" stroke="#d58e9f"
-          stroke-width="2"/>
-    <animateTransform attributeName="transform"
-      type="rotate"
-      values="-1 410 120;2 410 120;-1 410 120"
-      dur="5s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- Desk -->
-  <ellipse cx="480" cy="249" rx="395" ry="16"
-           fill="#806c83" opacity=".12"
-           filter="url(#softShadow)"/>
-  <path d="M83 219H875L849 241H108Z"
-        fill="url(#wood)"/>
-  <path d="M108 241H849V247H108Z"
-        fill="#c6a18e"/>
-  <rect x="113" y="247" width="16" height="42"
-        fill="#c39e89"/>
-  <rect x="820" y="247" width="16" height="42"
-        fill="#c39e89"/>
+  <!-- Books -->
+  <path d="M143 220l67-5 4 8-67 6Z" fill="#aabce6"/>
+  <path d="M149 209l65-1 2 9-65 3Z" fill="#edb1c6"/>
+  <path d="M157 213h51M151 224h58" stroke="#fffaf7" stroke-width="2"/>
 
   <!-- Plant -->
   <g>
-    <path d="M268 219h43l-7 24h-29z"
-          fill="#e6b8ab"/>
-    <path d="M289 220Q277 184 255 182
-             M289 220Q300 182 315 177
-             M289 220Q289 184 285 163"
-          stroke="#7dac97" stroke-width="3"
-          fill="none"/>
-    <g fill="#a0cdb2">
-      <ellipse cx="258" cy="184" rx="16" ry="8"
-               transform="rotate(27 258 184)"/>
-      <ellipse cx="311" cy="180" rx="15" ry="8"
-               transform="rotate(-30 311 180)"/>
-      <ellipse cx="285" cy="166" rx="8" ry="17"/>
-      <animateTransform attributeName="transform"
-        type="rotate"
-        values="-3 289 220;3 289 220;-3 289 220"
-        dur="5s" repeatCount="indefinite"/>
+    <path d="M263 219h45l-7 25h-31Z" fill="#e9b7ab"/>
+    <path d="M285 220Q274 188 254 182M285 220Q298 185 310 177M285 220Q286 187 282 166" stroke="#7cae9a" stroke-width="3" fill="none"/>
+    <g fill="#a2cdb0">
+      <ellipse cx="254" cy="184" rx="16" ry="8" transform="rotate(25 254 184)"/>
+      <ellipse cx="309" cy="179" rx="16" ry="8" transform="rotate(-30 309 179)"/>
+      <ellipse cx="282" cy="167" rx="8" ry="16" transform="rotate(-8 282 167)"/>
+      <ellipse cx="269" cy="201" rx="12" ry="6" transform="rotate(37 269 201)"/>
+      <ellipse cx="299" cy="198" rx="12" ry="6" transform="rotate(-32 299 198)"/>
+      <animateTransform attributeName="transform" type="rotate" values="-2 285 219;2 285 219;-2 285 219" dur="5s" repeatCount="indefinite"/>
     </g>
   </g>
 
-  <!-- Laptop -->
+  <!-- Laptop screen with independent typing animation; no human hands -->
+  <rect x="430" y="136" width="225" height="102" rx="11" fill="#8996b4" opacity=".3" filter="url(#softShadow)"/>
+  <rect x="431" y="135" width="222" height="100" rx="10" fill="#8490ae"/>
+  <rect x="439" y="143" width="206" height="84" rx="5" fill="url(#monitor)"/>
+  <circle cx="542" cy="139" r="1.6" fill="#dbe3f0"/>
+  <g font-family="monospace" font-size="10.5">
+    <circle cx="451" cy="154" r="2.2" fill="#e8a3b7"/>
+    <circle cx="460" cy="154" r="2.2" fill="#f1d39e"/>
+    <circle cx="469" cy="154" r="2.2" fill="#9fd0ae"/>
+    <text x="451" y="177" fill="#9fe0d8">$ ./explore</text>
+    <g clip-path="url(#typeClip)">
+      <text x="451" y="201" fill="#d5c0f0">curiosity = true;</text>
+    </g>
+    <text x="451" y="216" fill="#84a5c7">learning...</text>
+    <rect x="534" y="192" width="5" height="10" fill="#b9eadb">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Screen reacts only when cat arrives -->
+    <g opacity="0">
+      <rect x="444" y="162" width="196" height="62" rx="4" fill="#222b44"/>
+      <text x="451" y="179" fill="#b5edd3">$ cat /dev/keyboard</text>
+      <text x="451" y="194" fill="#f6b9d8">meowww~~~~ :3</text>
+      <text x="451" y="209" fill="#f9d49c">&gt; unexpected input!</text>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;.32;.60" dur="16s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <path d="M418 235H665L681 248H402Z" fill="#9eabc6"/>
+  <path d="M402 248H681Q670 253 650 253H435Q415 253 402 248Z" fill="#808eab"/>
+  <path d="M504 237h73l4 7h-81Z" fill="#c1cce0"/>
+  <g fill="#e0e6f0" opacity=".8">
+    <rect x="446" y="238" width="13" height="3" rx="1"/>
+    <rect x="464" y="238" width="13" height="3" rx="1"/>
+    <rect x="482" y="238" width="13" height="3" rx="1"/>
+    <rect x="590" y="238" width="13" height="3" rx="1"/>
+    <rect x="608" y="238" width="13" height="3" rx="1"/>
+  </g>
+
+  <!-- Coffee and steam -->
+  <rect x="676" y="185" width="53" height="42" rx="7" fill="#fffafc" stroke="#eac7d6" stroke-width="3"/>
+  <path d="M729 193h8a10 10 0 010 22h-8" fill="none" stroke="#eac7d6" stroke-width="4"/>
+  <ellipse cx="702" cy="185" rx="24" ry="5" fill="#f1dfe6"/>
+  <ellipse cx="702" cy="185" rx="18" ry="3" fill="#b68c7b"/>
+  <path d="M695 207q7 8 14 0" fill="none" stroke="#e4b5c8" stroke-width="2"/>
+  <g stroke="#bda9d0" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <path d="M692 177q-8-8 0-17t0-16M708 177q8-8 0-17t0-16"/>
+    <animateTransform attributeName="transform" type="translate" values="0 3;0 -7;0 3" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".1;.7;.1" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Cat: left-facing on approach; right-facing while returning -->
   <g>
-    <rect x="432" y="137" width="220" height="98"
-          rx="10" fill="#828dab"/>
-    <rect x="440" y="145" width="204" height="81"
-          rx="5" fill="url(#monitor)"/>
-    <circle cx="542" cy="141" r="1.8"
-            fill="#dae2f0"/>
-
-    <!-- Terminal -->
-    <g font-family="monospace" font-size="10.5">
-      <circle cx="451" cy="156" r="2.3"
-              fill="#e8a3b7"/>
-      <circle cx="460" cy="156" r="2.3"
-              fill="#f2d59d"/>
-      <circle cx="469" cy="156" r="2.3"
-              fill="#a9d7be"/>
-
-      <text x="452" y="177" fill="#a7e0da">
-        $ ./explore
-      </text>
-
-      <!-- Typed code -->
-      <g clip-path="url(#typingClip)">
-        <text x="452" y="202" fill="#d9c1f4">
-          curiosity = true;
-        </text>
-      </g>
-
-      <!-- Cat-triggered terminal output -->
-      <g opacity="0">
-        <rect x="446" y="166" width="192" height="56"
-              rx="4" fill="#202941"/>
-        <text x="452" y="180" fill="#b8f1ce">
-          $ cat /dev/keyboard
-        </text>
-        <text x="452" y="195" fill="#f6bcda">
-          meowww~~~~ :3
-        </text>
-        <text x="452" y="211" fill="#f9d493">
-          &gt; unexpected input!
-        </text>
-        <animate attributeName="opacity"
-          values="0;0;1;1;0;0"
-          keyTimes="0;.26;.32;.6;.78;1"
-          dur="16s" repeatCount="indefinite"/>
-      </g>
-    </g>
-
-    <!-- Laptop keyboard -->
-    <path d="M421 235H663L681 247H405Z"
-          fill="#9faac4"/>
-    <path d="M405 247H681Q666 252 649 252H435
-             Q418 252 405 247Z"
-          fill="#808ca9"/>
-
-    <g fill="#dce6f1" opacity=".8">
-      <rect x="457" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="474" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="491" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="508" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="525" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="542" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="559" y="238" width="12" height="3"
-            rx="1"/>
-      <rect x="576" y="238" width="12" height="3"
-            rx="1"/>
-    </g>
-  </g>
-
-  <!-- Left typing hand -->
-  <!-- <g>
-    <path d="M414 204Q435 220 473 234"
-          fill="none" stroke="#ffdacd"
-          stroke-width="11" stroke-linecap="round"/>
-    <ellipse cx="477" cy="236" rx="10" ry="5"
-             fill="#ffdacd"/>
-    <g stroke="#f2c3b5" stroke-width="3"
-       stroke-linecap="round">
-      <path d="M477 237l10 2"/>
-      <path d="M474 238l9 4"/>
-    </g>
-    <animateTransform attributeName="transform"
-      type="rotate"
-      values="-2 414 204;3 414 204;-1 414 204;2 414 204;-2 414 204"
-      dur=".62s" repeatCount="indefinite"/>
-  </g> -->
-
-  <!-- Right typing hand -->
-  <!-- <g>
-    <path d="M449 202Q472 218 508 233"
-          fill="none" stroke="#ffdacd"
-          stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="512" cy="235" rx="10" ry="5"
-             fill="#ffdacd"/>
-    <g stroke="#f2c3b5" stroke-width="3"
-       stroke-linecap="round">
-      <path d="M511 236l11 2"/>
-      <path d="M509 238l10 4"/>
-    </g>
-    <animateTransform attributeName="transform"
-      type="rotate"
-      values="2 449 202;-3 449 202;2 449 202;0 449 202;2 449 202"
-      dur=".47s" repeatCount="indefinite"/>
-  </g> -->
-
-  <!-- Coffee -->
-  <g>
-    <rect x="676" y="186" width="52" height="40"
-          rx="7" fill="#fffafc"
-          stroke="#e9c8d6" stroke-width="3"/>
-    <path d="M728 194h8a10 10 0 010 21h-8"
-          fill="none" stroke="#e9c8d6"
-          stroke-width="4"/>
-    <ellipse cx="702" cy="186" rx="24" ry="5"
-             fill="#ead4dc"/>
-    <ellipse cx="702" cy="186" rx="18" ry="3"
-             fill="#b58b7b"/>
-
-    <!-- Steam -->
-    <g stroke="#bba7d1" stroke-width="2.5"
-       fill="none" stroke-linecap="round">
-      <path d="M692 179q-8-9 1-17t0-16
-               M709 179q8-9-1-17t0-16"/>
-      <animateTransform attributeName="transform"
-        type="translate"
-        values="0 4;0 -8;0 4"
-        dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity"
-        values=".15;.7;.15"
-        dur="3s" repeatCount="indefinite"/>
-    </g>
-  </g>
-
-<!-- Cat: walks left, interrupts typing, returns right -->
-<g>
-  <!-- Horizontal movement -->
-  <animateTransform
-    attributeName="transform"
-    type="translate"
-    values="0 0;0 0;-255 0;-255 0;0 0;0 0"
-    keyTimes="0;.1;.32;.6;.78;1"
-    dur="16s"
-    repeatCount="indefinite"/>
-
-  <!-- Flip around the cat's center (x=795) -->
-  <g transform="translate(795 0)">
-    <g>
-      <animateTransform
-        attributeName="transform"
-        type="scale"
-        calcMode="discrete"
-        values="-1 1;1 1;-1 1"
-        keyTimes="0;.6;.999"
-        dur="16s"
-        repeatCount="indefinite"/>
-
-      <g transform="translate(-795 0)">
-
-        <!-- Tail -->
-        <g>
-          <path
-            d="M764 220Q740 210 744 193Q749 183 758 194"
-            fill="none"
-            stroke="#777084"
-            stroke-width="9"
-            stroke-linecap="round"/>
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            values="-15 764 220;20 764 220;-15 764 220"
-            dur="1.8s"
-            repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 0;0 0;-255 0;-255 0;0 0;0 0"
+      keyTimes="0;.10;.32;.60;.78;1" dur="16s" repeatCount="indefinite"/>
+    <g transform="translate(795 0)">
+      <g transform="scale(-1 1)">
+        <animateTransform attributeName="transform" type="scale"
+          calcMode="discrete" values="-1 1;1 1;1 1"
+          keyTimes="0;.60;1" dur="16s" repeatCount="indefinite"/>
+        <g transform="translate(-795 0)">
+          <!-- Swishing tail -->
+          <g>
+            <path d="M763 220Q739 211 744 193Q749 185 758 195"
+                  fill="none" stroke="#786e83" stroke-width="9" stroke-linecap="round"/>
+            <animateTransform attributeName="transform" type="rotate"
+              values="-16 763 220;18 763 220;-16 763 220" dur="1.7s" repeatCount="indefinite"/>
+          </g>
+          <!-- Body -->
+          <ellipse cx="790" cy="217" rx="34" ry="19" fill="#f8f6f5"/>
+          <ellipse cx="782" cy="213" rx="19" ry="12" fill="#fff" opacity=".37">
+            <animate attributeName="ry" values="12;14;12" dur="3s" repeatCount="indefinite"/>
+          </ellipse>
+          <path d="M772 208Q789 201 806 211" fill="none" stroke="#e9e4eb" stroke-width="5" stroke-linecap="round"/>
+          <!-- Alternating paws -->
+          <g>
+            <path d="M775 225v13" stroke="#f8f6f5" stroke-width="9" stroke-linecap="round"/>
+            <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur=".6s" repeatCount="indefinite"/>
+          </g>
+          <g>
+            <path d="M804 225v13" stroke="#f8f6f5" stroke-width="9" stroke-linecap="round"/>
+            <animateTransform attributeName="transform" type="translate" values="0 -5;0 0;0 -5" dur=".6s" repeatCount="indefinite"/>
+          </g>
+          <!-- Head and ears -->
+          <circle cx="818" cy="193" r="19" fill="#f8f6f5"/>
+          <path d="M802 183l2-18 14 12M824 176l14-13-1 22" fill="#f8f6f5" stroke="#e6dfe8" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M807 179l2-8 6 6M829 177l6-6-1 9" fill="#eab7c7"/>
+          <g stroke="#726879" stroke-width="2.5" stroke-linecap="round">
+            <path d="M811 194h3M824 194h3"/>
+            <animate attributeName="opacity" values="1;1;0;1" keyTimes="0;.76;.80;1" dur="5s" repeatCount="indefinite"/>
+          </g>
+          <path d="M818 200l2 2 2-2" fill="#e5a3b7"/>
+          <path d="M820 202q-4 5-7 1M820 202q4 5 7 1" fill="none" stroke="#bd96a4" stroke-width="1.5"/>
+          <path d="M807 202l-11-3M807 206l-11 2M831 202l11-3M831 206l11 2" stroke="#c9b8c7" stroke-width="1.3"/>
+          <!-- Mischievous keyboard tap -->
+          <g>
+            <path d="M812 212Q803 225 795 236" fill="none" stroke="#f8f6f5" stroke-width="9" stroke-linecap="round"/>
+            <ellipse cx="793" cy="237" rx="7" ry="4" fill="#f8f6f5"/>
+            <animateTransform attributeName="transform" type="rotate" values="-4 812 212;8 812 212;-4 812 212" dur=".5s" repeatCount="indefinite"/>
+          </g>
         </g>
-
-        <!-- Body -->
-        <ellipse cx="789" cy="218" rx="34" ry="20"
-                 fill="#f8f6f5"/>
-        <path d="M773 207Q790 201 805 211"
-              fill="none"
-              stroke="#ece7ed"
-              stroke-width="5"
-              stroke-linecap="round"/>
-
-        <!-- Walking paws -->
-        <g>
-          <path d="M777 228v12"
-                stroke="#f8f6f5"
-                stroke-width="9"
-                stroke-linecap="round"/>
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            values="0 0;0 -6;0 0"
-            dur=".55s"
-            repeatCount="indefinite"/>
-        </g>
-        <g>
-          <path d="M803 228v12"
-                stroke="#f8f6f5"
-                stroke-width="9"
-                stroke-linecap="round"/>
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            values="0 -6;0 0;0 -6"
-            dur=".55s"
-            repeatCount="indefinite"/>
-        </g>
-
-        <!-- Head -->
-        <circle cx="818" cy="194" r="19"
-                fill="#f8f6f5"/>
-        <path d="M802 184l2-19 14 12
-                 M824 176l14-13-1 22"
-              fill="#f8f6f5"
-              stroke="#e6dfe8"
-              stroke-width="3"
-              stroke-linejoin="round"/>
-        <path d="M807 180l2-8 6 6
-                 M829 177l6-6-1 9"
-              fill="#ebb9c8"/>
-
-        <!-- Eyes -->
-        <g stroke="#746b7b"
-           stroke-width="2.5"
-           stroke-linecap="round">
-          <path d="M811 194h3M824 194h3"/>
-          <animate
-            attributeName="opacity"
-            values="1;1;0;1"
-            keyTimes="0;.76;.8;1"
-            dur="4.8s"
-            repeatCount="indefinite"/>
-        </g>
-
-        <!-- Face -->
-        <path d="M818 200l2 2 2-2"
-              fill="#e6a3b7"/>
-        <path d="M820 202q-4 5-7 1
-                 M820 202q4 5 7 1"
-              fill="none"
-              stroke="#bd95a3"
-              stroke-width="1.5"/>
-
-        <!-- Keyboard-tapping paw -->
-        <g>
-          <path d="M811 213Q803 226 796 236"
-                fill="none"
-                stroke="#f8f6f5"
-                stroke-width="9"
-                stroke-linecap="round"/>
-          <ellipse cx="794" cy="238"
-                   rx="7" ry="4"
-                   fill="#f8f6f5"/>
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            values="-4 811 213;7 811 213;-4 811 213"
-            dur=".45s"
-            repeatCount="indefinite"/>
-        </g>
-
       </g>
     </g>
   </g>
-</g>
 
-
-    <!-- Tail -->
-    <g>
-      <path d="M764 220Q740 210 744 193Q749 183 758 194"
-            fill="none" stroke="#777084"
-            stroke-width="9" stroke-linecap="round"/>
-      <animateTransform attributeName="transform"
-        type="rotate"
-        values="-15 764 220;20 764 220;-15 764 220"
-        dur="1.8s" repeatCount="indefinite"/>
-    </g>
-
-    <!-- Body -->
-    <ellipse cx="789" cy="218" rx="34" ry="20"
-             fill="#f8f6f5"/>
-    <path d="M773 207Q790 201 805 211"
-          fill="none" stroke="#ece7ed"
-          stroke-width="5" stroke-linecap="round"/>
-
-    <!-- Walking paws -->
-    <g>
-      <path d="M777 228v12"
-            stroke="#f8f6f5" stroke-width="9"
-            stroke-linecap="round"/>
-      <animateTransform attributeName="transform"
-        type="translate"
-        values="0 0;0 -6;0 0"
-        dur=".55s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <path d="M803 228v12"
-            stroke="#f8f6f5" stroke-width="9"
-            stroke-linecap="round"/>
-      <animateTransform attributeName="transform"
-        type="translate"
-        values="0 -6;0 0;0 -6"
-        dur=".55s" repeatCount="indefinite"/>
-    </g>
-
-    <!-- Cat head -->
-    <circle cx="818" cy="194" r="19"
-            fill="#f8f6f5"/>
-    <path d="M802 184l2-19 14 12
-             M824 176l14-13-1 22"
-          fill="#f8f6f5" stroke="#e6dfe8"
-          stroke-width="3" stroke-linejoin="round"/>
-    <path d="M807 180l2-8 6 6
-             M829 177l6-6-1 9"
-          fill="#ebb9c8"/>
-
-    <!-- Face -->
-    <g stroke="#746b7b" stroke-width="2.5"
-       stroke-linecap="round">
-      <path d="M811 194h3M824 194h3"/>
-      <animate attributeName="opacity"
-        values="1;1;0;1"
-        keyTimes="0;.76;.8;1"
-        dur="4.8s" repeatCount="indefinite"/>
-    </g>
-    <path d="M818 200l2 2 2-2"
-          fill="#e6a3b7"/>
-    <path d="M820 202q-4 5-7 1
-             M820 202q4 5 7 1"
-          fill="none" stroke="#bd95a3"
-          stroke-width="1.5"/>
-
-    <!-- Keyboard-tapping paw -->
-    <g>
-      <path d="M811 213Q803 226 796 236"
-            fill="none" stroke="#f8f6f5"
-            stroke-width="9" stroke-linecap="round"/>
-      <ellipse cx="794" cy="238" rx="7" ry="4"
-               fill="#f8f6f5"/>
-      <animateTransform attributeName="transform"
-        type="rotate"
-        values="-4 811 213;7 811 213;-4 811 213"
-        dur=".45s" repeatCount="indefinite"/>
-    </g>
-  </g>
-
-  <!-- Room darkens at night -->
-  <rect width="960" height="300" rx="24"
-        fill="#26315c" opacity="0"
-        pointer-events="none">
-    <animate attributeName="opacity"
-      values="0;0;.27;.27;0;0"
-      keyTimes="0;.3;.43;.75;.9;1"
-      dur="24s" repeatCount="indefinite"/>
+  <!-- The whole room becomes dim at night -->
+  <rect width="960" height="300" rx="24" fill="#29345d" opacity="0" pointer-events="none">
+    <animate attributeName="opacity" values="0;0;.28;.28;0;0" keyTimes="0;.30;.43;.75;.90;1" dur="24s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Lamp glow, synchronized with night -->
-  <g opacity="0">
-    <ellipse cx="678" cy="183" rx="245" ry="140"
-             fill="url(#lampGlow)"/>
-    <path d="M676 77L575 251H800Z"
-          fill="#fff0bc" opacity=".12"/>
-    <ellipse cx="676" cy="80" rx="16" ry="6"
-             fill="#fff9d5"/>
-    <animate attributeName="opacity"
-      values="0;0;1;1;0;0"
-      keyTimes="0;.3;.43;.75;.9;1"
-      dur="24s" repeatCount="indefinite"/>
+  <!-- Lamp turns on with exactly the same day/night timing -->
+  <g opacity="0" pointer-events="none">
+    <ellipse cx="668" cy="166" rx="245" ry="140" fill="url(#lampGlow)"/>
+    <path d="M668 78L555 251H785Z" fill="#ffefb8" opacity=".10"/>
+    <ellipse cx="668" cy="80" rx="16" ry="5" fill="#fff7cc"/>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.30;.43;.75;.90;1" dur="24s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Hanging lamp -->
-  <path d="M676 0V54"
-        stroke="#c2afc3" stroke-width="3"/>
-  <path d="M644 80Q648 51 676 51
-           Q704 51 708 80Z"
-        fill="#eabfce"/>
-  <path d="M644 80Q676 89 708 80"
-        fill="none" stroke="#d8a3b9"
-        stroke-width="3"/>
-  <ellipse cx="676" cy="80" rx="15" ry="4"
-           fill="#ffeed0">
-    <animate attributeName="fill"
-      values="#e4c9c0;#e4c9c0;#fff5b4;#fff5b4;#e4c9c0;#e4c9c0"
-      keyTimes="0;.3;.43;.75;.9;1"
-      dur="24s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <!-- Paper airplane -->
-  <g opacity=".85">
-    <path d="M0 0L34 7 0 15 9 8Z"
-          fill="#fff" stroke="#a5b9df"
-          stroke-width="1.7"/>
-    <path d="M9 8L34 7"
-          stroke="#c5a9db" stroke-width="1.3"/>
-    <animateMotion
-      path="M-80 105C120 15 310 95 510 52S835 45 1070 110"
-      dur="13s" begin="1s"
-      rotate="auto"
-      repeatCount="indefinite"/>
+  <!-- Flying paper plane -->
+  <g opacity=".9">
+    <path d="M0 0L34 7 0 15 9 8Z" fill="#fff" stroke="#9fb7df" stroke-width="1.7" stroke-linejoin="round"/>
+    <path d="M9 8L34 7" fill="none" stroke="#c8a8d9" stroke-width="1.3"/>
+    <animateMotion path="M-75 110C110 18 310 84 505 49S835 40 1060 110" dur="13s" rotate="auto" repeatCount="indefinite"/>
   </g>
 
-  <!-- Twinkling decorations -->
-  <g fill="#d5a9df">
-    <path d="M348 43l3 8 8 3-8 3-3 8-3-8-8-3 8-3z">
-      <animate attributeName="opacity"
-        values=".2;1;.2" dur="2.4s"
-        repeatCount="indefinite"/>
-    </path>
-    <path d="M915 190l2 6 6 2-6 2-2 6-2-6-6-2 6-2z">
-      <animate attributeName="opacity"
-        values="1;.2;1" dur="3.3s"
-        repeatCount="indefinite"/>
-    </path>
+  <!-- Sparkles -->
+  <g fill="#d5a6df">
+    <path d="M350 43l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"><animate attributeName="opacity" values=".2;1;.2" dur="2.4s" repeatCount="indefinite"/></path>
+    <path d="M922 205l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"><animate attributeName="opacity" values="1;.2;1" dur="3.3s" repeatCount="indefinite"/></path>
+    <circle cx="601" cy="75" r="2.4"><animate attributeName="opacity" values=".2;1;.2" dur="2.9s" repeatCount="indefinite"/></circle>
   </g>
-
-  <!-- Frame -->
-  <rect x="1.5" y="1.5" width="957" height="297"
-        rx="23" fill="none"
-        stroke="#fff" stroke-opacity=".6"
-        stroke-width="3"/>
+  <rect x="1.5" y="1.5" width="957" height="297" rx="23" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="3"/>
 </svg>

@@ -27,6 +27,12 @@
 | [CTF WriteUps](https://github.com/goroshirow/CTF-WriteUps) | これまでに解いたCTF問題の記録 |
 | [Hack The Box WriteUps](https://github.com/goroshirow/HTB_WriteUps) | Hack The Boxの挑戦記録 |
 
+## 学びの記録
+
+- 問題を解くだけでなく、解法や気づきを整理する
+- うまくいかなかったことも、次に活かせる形で残す
+- 新しい知識を一つずつ積み重ねる
+
 <div align="center">
 
 <img
@@ -36,6 +42,8 @@
 />
 
 <br/>
+
+<sub>今日の学びを、次の挑戦へ。</sub>
 
 <img
   src="https://capsule-render.vercel.app/api?type=waving&color=0:B8A7E8,50:7B8FE8,100:6DD5ED&height=110&section=footer&animation=twinkling"

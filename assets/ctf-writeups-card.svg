@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="128" viewBox="0 0 420 128" role="img" aria-labelledby="title desc">
+  <title id="title">CTF-WriteUps repository card</title>
+  <desc id="desc">Pinned-style repository card for CTF-WriteUps</desc>
+
+  <style>
+    :root{
+      --bg: #f8faff;
+      --border: #d0d7de;
+      --title: #6574CD;
+      --text: #596579;
+      --muted: #6e7781;
+      --label-bg: #ffffff;
+      --label-border: #d0d7de;
+      --label-text: #57606a;
+      --icon: #8b949e;
+      --lang: #3572A5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root{
+        --bg: #0d1117;
+        --border: #30363d;
+        --title: #8b9cff;
+        --text: #c9d1d9;
+        --muted: #8b949e;
+        --label-bg: #161b22;
+        --label-border: #30363d;
+        --label-text: #c9d1d9;
+        --icon: #8b949e;
+        --lang: #3572A5;
+      }
+    }
+
+    text {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    }
+
+    .mono {
+      font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,"Liberation Mono",monospace;
+    }
+  </style>
+
+  <!-- Card -->
+  <rect x="1" y="1" width="418" height="126" rx="8" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+
+  <!-- Top row -->
+  <!-- Repo icon -->
+  <g transform="translate(18 18)" fill="none" stroke="var(--icon)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.75 1.75h8.5a1.5 1.5 0 0 1 1.5 1.5v9.5a1 1 0 0 1-1.6.8L8 10.75l-4.15 2.8a1 1 0 0 1-1.6-.8v-9.5a1.5 1.5 0 0 1 1.5-1.5z"/>
+    <path d="M5.25 4.75h5.5"/>
+  </g>
+
+  <!-- Repo name -->
+  <text x="42" y="31" font-size="15" font-weight="600" fill="var(--title)">CTF-WriteUps</text>
+
+  <!-- Public label -->
+  <g transform="translate(334 16)">
+    <rect x="0.75" y="0.75" width="67.5" height="22.5" rx="11.25" fill="var(--label-bg)" stroke="var(--label-border)" stroke-width="1.5"/>
+    <text x="34.5" y="15.2" text-anchor="middle" font-size="12" font-weight="600" fill="var(--label-text)">Public</text>
+  </g>
+
+  <!-- Description -->
+  <text x="18" y="58" font-size="13" fill="var(--text)">これまでに解いたCTFの問題をためておく場所</text>
+
+  <!-- Bottom row -->
+  <circle cx="22" cy="94" r="6" fill="var(--lang)"/>
+  <text x="36" y="98.5" font-size="12.5" fill="var(--muted)">Python</text>
+</svg>
